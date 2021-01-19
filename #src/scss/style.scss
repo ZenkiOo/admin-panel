@@ -1,0 +1,13 @@
+@import "mixins.scss";
+@import "reset.scss";
+@include font-face ("OpenSans", "../fonts/OpenSans"); // FontFace Mixin
+
+body {
+  font-family: "OpenSans";
+  color: rgba(255, 255, 255, 0.411);
+}
+.body {
+  background-image: url(../img/wallp.jpg);
+  min-height: 100vh;
+  padding: 30px;
+}
