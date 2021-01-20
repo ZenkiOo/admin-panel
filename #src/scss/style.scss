@@ -1,14 +1,30 @@
-@import "mixins.scss";
-@import "reset.scss";
-@import "header.scss";
-@include font-face ("OpenSans", "../fonts/OpenSans"); // FontFace Mixin
+@import 'mixins.scss';
+@import 'reset.scss';
+@import 'simplebar-custom.scss';
+@import 'header.scss';
+@import 'body.scss';
+@import 'sidebar.scss';
+@import 'main.scss';
+@import 'content.scss';
+@import 'filters.scss';
+@import 'table-header.scss';
+@import 'users.scss';
+@import 'footer.scss';
+
+@include font-face('OpenSans', '../fonts/OpenSans'); // FontFace Mixin
+
+::selection {
+  background: #ff6c60;
+  color: #fff;
+}
 
 body {
-  font-family: "OpenSans";
+  font-family: 'OpenSans';
   color: #797979;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-y: hidden;
 }
-.body {
+
+.container {
   background-image: url(../img/wallp.jpg);
-  min-height: 100vh;
 }

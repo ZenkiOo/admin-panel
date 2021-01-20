@@ -1,21 +1,1441 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="ZenkiOo" />
-    <meta name="author" content="ZenkiOo" />
-    <script src="https://use.fontawesome.com/fc3b6f815b.js"></script>
-    <title>ADMIN</title>
-    <link rel="stylesheet" href="css/style.min.css" />
-  </head>
-  <body>
-    <div class="body">
-      <div class="container">
-        @@include("_header.html")
-        @@include("_body.html")
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ZenkiOo" />
+  <meta name="author" content="ZenkiOo" />
+  <script src="https://use.fontawesome.com/fc3b6f815b.js"></script>
+  <title>ADMIN</title>
+  <link rel="stylesheet" href="css/simplebar.min.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <a href="#" class="header__burger">
+        <span class="header__burger-el"></span>
+        <span class="header__burger-el"></span>
+        <span class="header__burger-el"></span>
+      </a>
+      <div class="header__logo">
+        <a href="#" class="header__logo-text">Skylove<span class="header__logo-text--orange">Support</span></a>
       </div>
-    </div>
-    <script src="js/script.min.js"></script>
-  </body>
+      <a href="#" class="header__select">
+        <img src="img/avatar1_small.jpg" alt="" class="header__select-img" />
+        <span class="header__select-text">Администратор</span>
+        <span class="header__select-icon"></span>
+      </a>
+      <span class="dropdown">
+        <a href="#" class="dropdown__btn">
+          <i class="dropdown__btn-icon fa fa-suitcase"></i>
+          <span>Профиль</span>
+        </a>
+        <a href="#" class="dropdown__btn">
+          <i class="dropdown__btn-icon fa fa-cog"></i>
+          <span>Настройки</span>
+        </a>
+        <a href="#" class="dropdown__btn">
+          <i class="dropdown__btn-icon fa fa-bell"></i>
+          <span>Уведомления</span>
+        </a>
+        <a href="#" class="dropdown__btn">
+          <i class="dropdown__btn-icon fa fa-key"></i>
+          <span>Выход</span>
+        </a>
+      </span>
+    </header>
+    <section class="body">
+      <aside class="sidebar">
+        <ul class="sidebar__list">
+          <li class="sidebar__item sidebar__item-1">
+            <a href="#" class="sidebar__link">
+              <i class="sidebar__link-icon fa fa-cogs"></i>
+              <span class="sidebar__link-text">Отзывы</span>
+              <span class="badge">5</span>
+            </a>
+            <ul class="sidebar__list-hidden">
+              <li class="sidebar__item-hidden">
+                <a href="#" class="sidebar__link sidebar__link-hidden">Android<span class="badge">5</span></a>
+              </li>
+              <li class="sidebar__item-hidden">
+                <a href="#" class="sidebar__link sidebar__link-hidden">IOS<span class="badge">5</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidebar__item sidebar__item-2">
+            <a href="#" class="sidebar__link">
+              <i class="sidebar__link-icon fa fa-cogs"></i>
+              <span class="sidebar__link-text">Источник</span>
+              <span class="badge">5</span>
+            </a>
+            <ul class="sidebar__list-hidden">
+              <li class="sidebar__item-hidden">
+                <a href="#" class="sidebar__link sidebar__link-hidden">Почта<span class="badge">5</span></a>
+              </li>
+              <li class="sidebar__item-hidden">
+                <a href="#" class="sidebar__link sidebar__link-hidden">Сайт<span class="badge">5</span></a>
+              </li>
+              <li class="sidebar__item-hidden">
+                <a href="#" class="sidebar__link sidebar__link-hidden">Android<span class="badge">5</span></a>
+              </li>
+              <li class="sidebar__item-hidden">
+                <a href="#" class="sidebar__link sidebar__link-hidden">IOS<span class="badge">5</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidebar__item sidebar__item-3">
+            <a href="#" class="sidebar__link">
+              <i class="sidebar__link-icon fa fa-cogs"></i>
+              <span class="sidebar__link-text">Статусы</span>
+              <span class="badge">5</span>
+            </a>
+            <ul class="sidebar__list-hidden">
+              <li class="sidebar__item-hidden">
+                <a href="#" class="sidebar__link sidebar__link-hidden">Новые<span class="badge">5</span></a>
+              </li>
+              <li class="sidebar__item-hidden">
+                <a href="#" class="sidebar__link sidebar__link-hidden">В обработке<span class="badge">5</span></a>
+              </li>
+              <li class="sidebar__item-hidden">
+                <a href="#" class="sidebar__link sidebar__link-hidden">Отложено<span class="badge">5</span></a>
+              </li>
+              <li class="sidebar__item-hidden">
+                <a href="#" class="sidebar__link sidebar__link-hidden">Закрыто<span class="badge">5</span></a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidebar__item sidebar__item-4">
+            <a href="#" class="sidebar__link">
+              <i class="sidebar__link-icon fa fa-cogs"></i>
+              <span class="sidebar__link-text">Департаменты</span>
+              <span class="badge">5</span>
+            </a>
+            <ul class="sidebar__list-hidden">
+              <li class="sidebar__item-hidden">
+                <a href="#" class="sidebar__link sidebar__link-hidden">Техподдержка<span class="badge">5</span></a>
+              </li>
+              <li class="sidebar__item-hidden">
+                <a href="#" class="sidebar__link sidebar__link-hidden">Баги<span class="badge">5</span></a>
+              </li>
+              <li class="sidebar__item-hidden">
+                <a href="#" class="sidebar__link sidebar__link-hidden">Платежи<span class="badge">5</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+      <main class="main">
+        <section class="filters">
+          <div class="filters__items">
+            <div class="filters__item">
+              <input placeholder="id" type="text" class="filters__input filters__input--id">
+            </div>
+            <div class="filters__item">
+              <input placeholder="Имя" type="text" class="filters__input filters__input--name">
+            </div>
+            <div class="filters__item">
+              <input placeholder="Город" type="text" class="filters__input filters__input--city">
+            </div>
+            <div class="filters__item">
+              <span class="filters__item-title">Пол:</span>
+              <select id="user-gender" class="filters__select">
+                <option value="na">Неважно</option>
+                <option value="male">Муж</option>
+                <option value="female">Жен</option>
+              </select>
+            </div>
+            <div class="filters__item">
+              <span class="filters__item-title">Возраст:</span>
+              <input placeholder="От" type="text" class="filters__input filters__input--age">
+              <input placeholder="До" type="text" class="filters__input filters__input--age">
+            </div>
+            <div class="filters__item">
+              <span class="filters__item-title">OS:</span>
+              <select id="user-os" class="filters__select">
+                <option value="na">Неважно</option>
+                <option value="android">Android</option>
+                <option value="ios">IOS</option>
+              </select>
+            </div>
+            <div class="filters__item">
+              <span class="filters__item-title">VIP:</span>
+              <select id="user-vip" class="filters__select">
+                <option value="na">Неважно</option>
+                <option value="true">Да</option>
+                <option value="false">Нет</option>
+              </select>
+            </div>
+            <div class="filters__item">
+              <span class="filters__item-title">Online:</span>
+              <select id="user-online" class="filters__select">
+                <option value="na">Неважно</option>
+                <option value="true">Online</option>
+                <option value="recently">Был недавно</option>
+                <option value="false">Offline</option>
+              </select>
+            </div>
+            <div class="filters__item">
+              <span class="filters__item-title">Статус:</span>
+              <select id="user-os" class="filters__select">
+                <option value="false">Нет</option>
+                <option value="true">Да</option>
+              </select>
+            </div>
+          </div>
+          <div class="filters__buttons">
+            <a href="#" class="filters__btn-clear">
+              <i class="fa fa-eraser"></i>
+            </a>
+            <a href="#" class="filters__btn-search">
+              <span>Поиск</span>
+            </a>
+          </div>
+        </section>
+        <section class="content">
+          <ul class="table-header">
+            <li class="table-header__item"><span class="table-header__item-text">Номер тикета</span></li>
+            <li class="table-header__item"><span class="table-header__item-text">Ф.И.О.</span></li>
+            <li class="table-header__item"><span class="table-header__item-text">Сообщение</span></li>
+            <li class="table-header__item"><span class="table-header__item-text">Департамент</span></li>
+            <li class="table-header__item"><span class="table-header__item-text">Статус</span></li>
+            <li class="table-header__item"><span class="table-header__item-text">Приоритет</span></li>
+            <li class="table-header__item"><span class="table-header__item-text">Обновлено</span></li>
+          </ul>
+          <ul data-simplebar class="users">
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного рода?</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                </li>
+                <li class="users__user-item">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <footer class="footer">
+            <span class="footer__text">2021 © Skylove.</span>
+          </footer>
+        </section>
+      </main>
+    </section>
+  </div>
+  <script src="js/script.min.js"></script>
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+</body>
+
 </html>

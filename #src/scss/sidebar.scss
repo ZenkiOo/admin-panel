@@ -1,0 +1,127 @@
+.sidebar {
+  width: 210px;
+  background-color: #2a3542;
+  overflow: hidden;
+  transition: 0.55s cubic-bezier(0.645, 0.045, 0.355, 1);
+  &.hide {
+    width: 0;
+  }
+  // .sidebar__list
+  &__list {
+    padding: 10px 10px 0 10px;
+  }
+  // .sidebar__item
+  &__item {
+    width: 100%;
+    height: 46px;
+    // height: 100%;
+    margin-top: 5px;
+    padding-left: 10px;
+    overflow: hidden;
+    border-radius: 4px;
+    transition: 0.4s;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 7px;
+      background-color: #aeb2b7;
+      top: 20px;
+      right: 20px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 1px;
+      background-color: #aeb2b7;
+      top: 23px;
+      right: 17px;
+    }
+    &:hover {
+      background: #35404d;
+    }
+    &.expanded {
+      background: #35404d;
+      &:before {
+        display: none;
+      }
+    }
+    &.expanded .sidebar__link .sidebar__link-text {
+      color: #fff;
+    }
+    &.expanded .sidebar__link-icon {
+      color: #ff6c60;
+    }
+  }
+  &__item-1 {
+    &.expanded {
+      height: 120px;
+    }
+  }
+  &__item-2 {
+    &.expanded {
+      height: 190px;
+    }
+  }
+  &__item-3 {
+    &.expanded {
+      height: 190px;
+    }
+  }
+  &__item-4 {
+    &.expanded {
+      height: 155px;
+    }
+  }
+  // .sidebar__link
+  &__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 47px;
+    color: #aeb2b7;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    &:hover {
+      color: #fff;
+    }
+    &:hover .sidebar__link-icon {
+      color: #ff6c60;
+    }
+  }
+  // .sidebar__link-text
+  &__link-text {
+  }
+  //   .sidebar__link-icon
+  &__link-icon {
+    font-size: 15px;
+    padding-right: 7px;
+    transition: all 0.3s ease;
+  }
+  //.sidebar__link-hidden
+  &__link-hidden {
+    height: 35px;
+    transition: all 0.3s ease;
+    &:hover {
+      color: #ff6c60;
+    }
+  }
+  // .sidebar__list-hidden
+  &__list-hidden {
+    padding-left: 20px;
+    padding-top: 3px;
+  }
+  // .sidebar__item-hidden
+  &__item-hidden {
+  }
+}
+
+.badge {
+  position: absolute;
+  background-color: #fff;
+  top: -3px;
+  right: 0;
+}

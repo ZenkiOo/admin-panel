@@ -1,0 +1,108 @@
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 16px 9px 16px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 16px);
+    height: 1px;
+    background-color: #c9cdd7;
+    top: 10px;
+    left: 16px;
+  }
+  // .filters__items
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  // .filters__item
+  &__item {
+    position: relative;
+    margin-top: 40px;
+    margin-right: 8px;
+  }
+  // .filters__select
+  &__select {
+    width: 93px;
+    height: 34px;
+    padding: 4px 6px;
+    font-size: 12px;
+    font-family: inherit;
+    color: inherit;
+    background-color: #fff;
+    border: 1px solid #e2e2e4;
+    border-radius: 4px;
+    &:focus {
+      outline: none;
+      border: 1px solid #517397;
+    }
+  }
+  // .filters__input
+  &__input {
+    height: 34px;
+    padding: 4px 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #318bcc;
+    border: 1px solid #e2e2e4;
+    border-radius: 4px;
+    &:focus {
+      outline: none;
+      border: 1px solid #517397;
+    }
+  }
+  // .filters__input--id
+  &__input--id {
+    width: 82px;
+  }
+  // .filters__input--name
+  &__input--name {
+    width: 100px;
+  }
+  // .filters__input--city
+  &__input--city {
+    width: 120px;
+  }
+  // .filters__input--age
+  &__input--age {
+    width: 35px;
+  }
+  // .filters__item-title
+  &__item-title {
+    position: absolute;
+    top: -20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #797979;
+  }
+  // .filters__buttons
+  &__buttons {
+    display: flex;
+    margin-top: 7px;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  // .filters__btn-clear
+  &__btn-clear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 34px;
+    color: #fff;
+    background-color: #bec3c7;
+  }
+  // .filters__btn-search
+  &__btn-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    height: 34px;
+    color: #fff;
+    background-color: #269abc;
+  }
+}

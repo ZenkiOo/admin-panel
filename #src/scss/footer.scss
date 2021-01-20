@@ -1,0 +1,11 @@
+.footer {
+  background-color: #5b6e84;
+  text-align: center;
+  padding: 6px 0 14px 0;
+  justify-self: flex-end;
+  // .footer__text
+  &__text {
+    color: #fff;
+    font-size: 13px;
+  }
+}

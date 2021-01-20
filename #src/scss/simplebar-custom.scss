@@ -1,0 +1,15 @@
+.simplebar-track.simplebar-vertical {
+    background-color: rgb(64, 64, 64);
+    width: 6px;
+}
+.simplebar-scrollbar::before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
+    background-color: rgb(232, 64, 63);;
+}
+.simplebar-scrollbar.simplebar-visible::before {
+    opacity: 1;
+}

@@ -1,0 +1,8 @@
+.main {
+  width: calc(100% - 195px);
+  transition: width 0.55s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-color: #f1f2f7;
+  &.sidebar-hidden {
+    width: 100%;
+  }
+}

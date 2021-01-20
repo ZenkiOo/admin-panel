@@ -1,0 +1,51 @@
+.users {
+  overflow: auto;
+  height: calc(100vh - 235px);
+  // .users__item
+  &__item {
+    margin-left: 16px;
+    background-color: #fff;
+    border-bottom: 1px solid #eef1f6;
+    &:hover {
+      background-color: #f9f9f9;
+    }
+  }
+  // .users__user
+  &__user {
+    display: flex;
+  }
+  // .users__user-item
+  &__user-item {
+    width: 14.28%;
+    padding: 20px 0;
+    text-align: center;
+  }
+  // .users__user-mobtitle
+  &__user-mobtitle {
+    display: none;
+  }
+  // .users__user-text
+  &__user-text {
+    font-size: 14px;
+  }
+  // .users__user-text-message
+  &__user-text-message {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  // .users__user-text-status
+  &__user-text-status {
+  }
+  // .users__user-text-status--new
+  &__user-text-status--new {
+  }
+  // .users__user-text-priority
+  &__user-text-priority {
+  }
+  // .users__user-text-priority--low
+  &__user-text-priority--low {
+  }
+}
