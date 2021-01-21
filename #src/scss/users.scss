@@ -14,10 +14,10 @@
   &__user {
     display: flex;
   }
-  // .users__user-item
-  &__user-item {
+  // .users__user-field
+  &__user-field {
     width: 14.28%;
-    padding: 20px 0;
+    padding: 20px 5px;
     text-align: center;
   }
   // .users__user-mobtitle
@@ -30,10 +30,11 @@
   }
   // .users__user-text-message
   &__user-text-message {
+    text-align: start;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
   // .users__user-text-status

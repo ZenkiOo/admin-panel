@@ -1,7 +1,7 @@
 .filters {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding: 13px 16px 9px 16px;
   position: relative;
   &::before {
@@ -81,7 +81,6 @@
   // .filters__buttons
   &__buttons {
     display: flex;
-    margin-top: 7px;
     overflow: hidden;
     border-radius: 4px;
   }
