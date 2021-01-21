@@ -2,6 +2,12 @@
   width: calc(100% - 195px);
   transition: width 0.55s cubic-bezier(0.645, 0.045, 0.355, 1);
   background-color: #f1f2f7;
+  @media (max-width: 1160px) {
+    width: 100%;
+  }
+  @media (max-width: 960px) {
+    padding-top: 60px;
+  }
   &.sidebar-hidden {
     width: 100%;
   }

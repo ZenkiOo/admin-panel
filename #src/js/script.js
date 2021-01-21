@@ -39,4 +39,9 @@ document.addEventListener('click', (e) => {
     if (target.closest('.sidebar__link-hidden')) return;
     target.closest('.sidebar__item').classList.toggle('expanded');
   }
+
+  // Фильтры (мобильная версия)
+  if (target.closest('.filters__link')) {
+    document.querySelector('.filters').classList.toggle('opened')
+  }
 });

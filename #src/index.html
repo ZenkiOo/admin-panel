@@ -97,20 +97,20 @@
             </a>
             <ul class="sidebar__list-hidden">
               <li class="sidebar__item-hidden">
-                <a href="#" class="sidebar__link sidebar__link-hidden"><span class="sidebar__link-text">Новые<span
-                      class="badge">1</span></span></a>
+                <a href="#" class="sidebar__link sidebar__link-hidden sidebar__link-status"><span class="sidebar__link-text"><span
+                      class="status status-new"></span>Новые<span class="badge">1</span></span></a>
               </li>
               <li class="sidebar__item-hidden">
-                <a href="#" class="sidebar__link sidebar__link-hidden"><span class="sidebar__link-text">В обработке<span
-                      class="badge">12</span></span></a>
+                <a href="#" class="sidebar__link sidebar__link-hidden sidebar__link-status"><span class="sidebar__link-text"><span
+                      class="status status-inwork"></span>В обработке<span class="badge">12</span></span></a>
               </li>
               <li class="sidebar__item-hidden">
-                <a href="#" class="sidebar__link sidebar__link-hidden"><span class="sidebar__link-text">Отложено<span
-                      class="badge">2</span></span></a>
+                <a href="#" class="sidebar__link sidebar__link-hidden sidebar__link-status"><span class="sidebar__link-text"><span
+                      class="status status-defer"></span>Отложено<span class="badge">2</span></span></a>
               </li>
               <li class="sidebar__item-hidden">
-                <a href="#" class="sidebar__link sidebar__link-hidden"><span class="sidebar__link-text">Закрыто<span
-                      class="badge">25</span></span></a>
+                <a href="#" class="sidebar__link sidebar__link-hidden sidebar__link-status"><span class="sidebar__link-text"><span
+                      class="status status-closed"></span>Закрыто<span class="badge">25</span></span></a>
               </li>
             </ul>
           </li>
@@ -138,60 +138,72 @@
       </aside>
       <main class="main">
         <section class="filters">
+          <a href="#" class="filters__link">
+            <span class="filters__button">
+              <i class="filters__icon fa fa-filter"></i>
+              <span class="filters__button-text">Фильтры</span>
+            </span>
+          </a>
           <div class="filters__items">
-            <div class="filters__item">
-              <input placeholder="id" type="text" class="filters__input filters__input--id" />
+            <div class="filters__group">
+              <div class="filters__item">
+                <input placeholder="id" type="text" class="filters__input filters__input--id" />
+              </div>
+              <div class="filters__item">
+                <input placeholder="Имя" type="text" class="filters__input filters__input--name" />
+              </div>
+              <div class="filters__item">
+                <input placeholder="Город" type="text" class="filters__input filters__input--city" />
+              </div>
             </div>
-            <div class="filters__item">
-              <input placeholder="Имя" type="text" class="filters__input filters__input--name" />
+            <div class="filters__group">
+              <div class="filters__item">
+                <span class="filters__item-title">Пол:</span>
+                <select id="user-gender" class="filters__select">
+                  <option value="na">Неважно</option>
+                  <option value="male">Муж</option>
+                  <option value="female">Жен</option>
+                </select>
+              </div>
+              <div class="filters__item">
+                <span class="filters__item-title">Возраст:</span>
+                <input placeholder="От" type="text" class="filters__input filters__input--age" />
+                <input placeholder="До" type="text" class="filters__input filters__input--age" />
+              </div>
+              <div class="filters__item">
+                <span class="filters__item-title">OS:</span>
+                <select id="user-os" class="filters__select">
+                  <option value="na">Неважно</option>
+                  <option value="android">Android</option>
+                  <option value="ios">IOS</option>
+                </select>
+              </div>
             </div>
-            <div class="filters__item">
-              <input placeholder="Город" type="text" class="filters__input filters__input--city" />
-            </div>
-            <div class="filters__item">
-              <span class="filters__item-title">Пол:</span>
-              <select id="user-gender" class="filters__select">
-                <option value="na">Неважно</option>
-                <option value="male">Муж</option>
-                <option value="female">Жен</option>
-              </select>
-            </div>
-            <div class="filters__item">
-              <span class="filters__item-title">Возраст:</span>
-              <input placeholder="От" type="text" class="filters__input filters__input--age" />
-              <input placeholder="До" type="text" class="filters__input filters__input--age" />
-            </div>
-            <div class="filters__item">
-              <span class="filters__item-title">OS:</span>
-              <select id="user-os" class="filters__select">
-                <option value="na">Неважно</option>
-                <option value="android">Android</option>
-                <option value="ios">IOS</option>
-              </select>
-            </div>
-            <div class="filters__item">
-              <span class="filters__item-title">VIP:</span>
-              <select id="user-vip" class="filters__select">
-                <option value="na">Неважно</option>
-                <option value="true">Да</option>
-                <option value="false">Нет</option>
-              </select>
-            </div>
-            <div class="filters__item">
-              <span class="filters__item-title">Online:</span>
-              <select id="user-online" class="filters__select">
-                <option value="na">Неважно</option>
-                <option value="true">Online</option>
-                <option value="recently">Был недавно</option>
-                <option value="false">Offline</option>
-              </select>
-            </div>
-            <div class="filters__item">
-              <span class="filters__item-title">Статус:</span>
-              <select id="user-os" class="filters__select">
-                <option value="false">Нет</option>
-                <option value="true">Да</option>
-              </select>
+            <div class="filters__group">
+              <div class="filters__item">
+                <span class="filters__item-title">VIP:</span>
+                <select id="user-vip" class="filters__select">
+                  <option value="na">Неважно</option>
+                  <option value="true">Да</option>
+                  <option value="false">Нет</option>
+                </select>
+              </div>
+              <div class="filters__item">
+                <span class="filters__item-title">Online:</span>
+                <select id="user-online" class="filters__select">
+                  <option value="na">Неважно</option>
+                  <option value="true">Online</option>
+                  <option value="recently">Был недавно</option>
+                  <option value="false">Offline</option>
+                </select>
+              </div>
+              <div class="filters__item">
+                <span class="filters__item-title">Статус:</span>
+                <select id="user-os" class="filters__select">
+                  <option value="false">Нет</option>
+                  <option value="true">Да</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="filters__buttons">
@@ -206,7 +218,7 @@
         <section class="content">
           <ul class="table-header">
             <li class="table-header__item">
-              <span class="table-header__item-text">Номер тикета</span>
+              <span class="table-header__item-text">Тикет</span>
             </li>
             <li class="table-header__item">
               <span class="table-header__item-text">Ф.И.О.</span>
@@ -215,7 +227,7 @@
               <span class="table-header__item-text">Сообщение</span>
             </li>
             <li class="table-header__item">
-              <span class="table-header__item-text">Департамент</span>
+              <span class="table-header__item-text">Деп.</span>
             </li>
             <li class="table-header__item">
               <span class="table-header__item-text">Статус</span>
@@ -250,7 +262,7 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
@@ -274,9 +286,7 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
+                  <span class="users__user-text users__user-text-message">Почему мне никто не отвечает?</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Департамент</span>
@@ -284,11 +294,11 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-inwork"></span>В обработке</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Обновлено</span>
@@ -304,7 +314,7 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
+                  <span class="users__user-text">Федот</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
@@ -316,7 +326,105 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Кристинка</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Зачем Герасим утопил свою Муму?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-defer"></span>Отложено</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Петр Алексеевич</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Представьте, вы стали размером с карандаш и попали в блендер. Как планируете выбираться наружу?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-closed"></span>Закрыто</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий Петрович Пупкин</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
+                    разного
+                    рода?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
@@ -336,7 +444,135 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
+                  <span class="users__user-text">Василиса Прекрасная</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне никто не отвечает?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-inwork"></span>В обработке</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Федот</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Кристинка</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Зачем Герасим утопил свою Муму?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-defer"></span>Отложено</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Петр Алексеевич</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Представьте, вы стали размером с карандаш и попали в блендер. Как планируете выбираться наружу?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-closed"></span>Закрыто</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий Петрович Пупкин</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
@@ -350,7 +586,7 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
@@ -370,7 +606,135 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
+                  <span class="users__user-text">Василиса Прекрасная</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне никто не отвечает?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-inwork"></span>В обработке</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Федот</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Кристинка</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Зачем Герасим утопил свою Муму?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-defer"></span>Отложено</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Петр Алексеевич</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Представьте, вы стали размером с карандаш и попали в блендер. Как планируете выбираться наружу?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-closed"></span>Закрыто</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий Петрович Пупкин</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
@@ -384,7 +748,7 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
@@ -404,7 +768,135 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
+                  <span class="users__user-text">Василиса Прекрасная</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне никто не отвечает?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-inwork"></span>В обработке</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Федот</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Кристинка</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Зачем Герасим утопил свою Муму?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-defer"></span>Отложено</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Петр Алексеевич</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Представьте, вы стали размером с карандаш и попали в блендер. Как планируете выбираться наружу?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-closed"></span>Закрыто</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий Петрович Пупкин</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
@@ -418,7 +910,7 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
@@ -438,7 +930,135 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
+                  <span class="users__user-text">Василиса Прекрасная</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне никто не отвечает?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-inwork"></span>В обработке</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Федот</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Кристинка</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Зачем Герасим утопил свою Муму?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-defer"></span>Отложено</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Петр Алексеевич</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Представьте, вы стали размером с карандаш и попали в блендер. Как планируете выбираться наружу?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-closed"></span>Закрыто</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий Петрович Пупкин</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
@@ -452,7 +1072,7 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
@@ -472,7 +1092,135 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
+                  <span class="users__user-text">Василиса Прекрасная</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне никто не отвечает?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-inwork"></span>В обработке</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Федот</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Кристинка</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Зачем Герасим утопил свою Муму?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-defer"></span>Отложено</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Петр Алексеевич</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Представьте, вы стали размером с карандаш и попали в блендер. Как планируете выбираться наружу?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-closed"></span>Закрыто</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий Петрович Пупкин</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
@@ -486,7 +1234,7 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
@@ -506,7 +1254,135 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
+                  <span class="users__user-text">Василиса Прекрасная</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне никто не отвечает?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-inwork"></span>В обработке</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Федот</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Кристинка</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Зачем Герасим утопил свою Муму?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-defer"></span>Отложено</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Петр Алексеевич</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Представьте, вы стали размером с карандаш и попали в блендер. Как планируете выбираться наружу?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-closed"></span>Закрыто</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий Петрович Пупкин</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
@@ -520,7 +1396,7 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
@@ -540,7 +1416,135 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
+                  <span class="users__user-text">Василиса Прекрасная</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне никто не отвечает?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-inwork"></span>В обработке</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Федот</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Кристинка</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Зачем Герасим утопил свою Муму?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-defer"></span>Отложено</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Петр Алексеевич</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Представьте, вы стали размером с карандаш и попали в блендер. Как планируете выбираться наружу?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-closed"></span>Закрыто</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий Петрович Пупкин</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
@@ -554,7 +1558,7 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
@@ -574,7 +1578,135 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
+                  <span class="users__user-text">Василиса Прекрасная</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне никто не отвечает?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-inwork"></span>В обработке</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Федот</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Кристинка</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Зачем Герасим утопил свою Муму?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-defer"></span>Отложено</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Петр Алексеевич</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Представьте, вы стали размером с карандаш и попали в блендер. Как планируете выбираться наружу?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-closed"></span>Закрыто</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий Петрович Пупкин</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
@@ -588,7 +1720,7 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
@@ -608,7 +1740,135 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
+                  <span class="users__user-text">Василиса Прекрасная</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне никто не отвечает?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-inwork"></span>В обработке</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Федот</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Кристинка</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Зачем Герасим утопил свою Муму?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-defer"></span>Отложено</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Петр Алексеевич</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Представьте, вы стали размером с карандаш и попали в блендер. Как планируете выбираться наружу?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-closed"></span>Закрыто</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий Петрович Пупкин</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
@@ -622,7 +1882,7 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
@@ -642,7 +1902,135 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
+                  <span class="users__user-text">Василиса Прекрасная</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему мне никто не отвечает?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-inwork"></span>В обработке</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Федот</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Почему?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Кристинка</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Зачем Герасим утопил свою Муму?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-defer"></span>Отложено</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Петр Алексеевич</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Сообщение</span>
+                  <span class="users__user-text users__user-text-message">Представьте, вы стали размером с карандаш и попали в блендер. Как планируете выбираться наружу?</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Департамент</span>
+                  <span class="users__user-text">Баги</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Статус</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-closed"></span>Закрыто</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Приоритет</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Обновлено</span>
+                  <span class="users__user-text">49 минут назад</span>
+                </li>
+              </ul>
+            </li>
+            <li class="users__item">
+              <ul class="users__user">
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Номер тикета</span>
+                  <span class="users__user-text">#36108</span>
+                </li>
+                <li class="users__user-field">
+                  <span class="users__user-mobtitle">Ф.И.О.</span>
+                  <span class="users__user-text">Василий Петрович Пупкин</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
@@ -656,7 +2044,7 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
@@ -676,13 +2064,11 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
+                  <span class="users__user-text">Василиса Прекрасная</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
+                  <span class="users__user-text users__user-text-message">Почему мне никто не отвечает?</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Департамент</span>
@@ -690,11 +2076,11 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-inwork"></span>В обработке</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Обновлено</span>
@@ -710,13 +2096,11 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
+                  <span class="users__user-text">Федот</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
+                  <span class="users__user-text users__user-text-message">Почему?</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Департамент</span>
@@ -724,11 +2108,11 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-new"></span>Новый</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Обновлено</span>
@@ -744,13 +2128,11 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
+                  <span class="users__user-text">Кристинка</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
+                  <span class="users__user-text users__user-text-message">Зачем Герасим утопил свою Муму?</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Департамент</span>
@@ -758,11 +2140,11 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-defer"></span>Отложено</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Обновлено</span>
@@ -778,13 +2160,11 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
+                  <span class="users__user-text">Петр Алексеевич</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
+                  <span class="users__user-text users__user-text-message">Представьте, вы стали размером с карандаш и попали в блендер. Как планируете выбираться наружу?</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Департамент</span>
@@ -792,691 +2172,11 @@
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
+                  <span class="users__user-text users__user-text-status"><span class="status status-closed"></span>Закрыто</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Обновлено</span>
-                  <span class="users__user-text">49 минут назад</span>
-                </li>
-              </ul>
-            </li>
-            <li class="users__item">
-              <ul class="users__user">
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Номер тикета</span>
-                  <span class="users__user-text">#36108</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Ф.И.О.</span>
-                  <span class="users__user-text">Василий</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Сообщение</span>
-                  <span class="users__user-text users__user-text-message">Почему мне постоянно высвечиваются сообщения
-                    разного
-                    рода?</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Департамент</span>
-                  <span class="users__user-text">Баги</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Статус</span>
-                  <span class="users__user-text users__user-text-status users__user-text-status--new">Новый</span>
-                </li>
-                <li class="users__user-field">
-                  <span class="users__user-mobtitle">Приоритет</span>
-                  <span class="users__user-text users__user-text-priority users__user-text-priority--low">Низкий</span>
+                  <span class="users__user-text users__user-text-priority">Низкий</span>
                 </li>
                 <li class="users__user-field">
                   <span class="users__user-mobtitle">Обновлено</span>

@@ -7,6 +7,10 @@
   align-items: center;
   background-color: #fff;
   border-bottom: 1px solid #f1f2f7;
+  @media (max-width: 960px) {
+    position: fixed;
+    z-index: 2;
+  }
   // .header__burger
   &__burger {
     display: flex;
@@ -68,6 +72,9 @@
     margin-right: 5px;
     color: #555555;
     font-size: 13px;
+    @media (max-width: 413px) {
+      display: none;
+    }
   }
   // .header__select-icon
   &__select-icon {
